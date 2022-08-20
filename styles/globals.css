@@ -1,26 +1,66 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: #FFF;
+  color: #373A3C; 
+
 }
 
-a {
+a,button {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
-* {
-  box-sizing: border-box;
+img {
+  max-width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
+.sectionTitle{
+  @apply
+  font-bold text-center
+  text-3xl lg:text-4xl
+}
+
+
+.opacity70-100{
+  @apply
+  opacity-70 hover:opacity-100
+}
+
+input, select, textarea{
+    @apply
+    border-gray-300
+    border-[0.5px]
+    border-solid
+    w-full 
+    rounded
+    text-base
+    px-4
+    focus:border-gray-800
+
+}
+.submit-button-container {
+    @apply
+    w-full my-5 flex justify-center
+}
+.submit-button-container button {
+    @apply
+    rounded-md py-1 px-5 hover:scale-105
+    font-bold text-xl tracking-wide
+    text-white 
+    bg-gradient-to-r from-gray-700  via-gray-900 to-black
+}
+ 
